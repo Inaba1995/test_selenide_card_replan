@@ -37,6 +37,7 @@ public class ReplanDeliveryCardFormTest {
         $("[data-test-id='replan-notification']")
                 .shouldHave(Condition.text("Перепланировать"), Duration.ofSeconds(15))
                 .shouldBe(Condition.visible);
+        $("[data-test-id='replan-notification'] button").click();
 
         $("[data-test-id='success-notification']")
                 .shouldHave(Condition.text("Встреча успешно запланирована на " + regData.getDateNext()), Duration.ofSeconds(15))
